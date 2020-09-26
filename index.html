@@ -33,47 +33,41 @@
 <body>
     <header>
         <div class="contenedor">
-            <div class="row">
                 <div class="contenedor-top">
-                    <h1>Mini Tiendas Virtuales</h1>
-                    <a href="#"><i class="fas fa-cart-plus"></i></a>
-                    <a href="#"><i class="fas fa-user-circle"></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-6">
-                    <div class="categorias">
+                    <div class="esquina-izquierda">
+                        <img class="logo" src="imagenes/Logo.png" alt="">
                         <a href="#">Categoria 1</a>
                         <a href="#">Categoria 2</a>
                         <a href="#">Categoria 3</a>
                         <a href="#">Categoria 4</a>
+                     </div>
+                    
+
+                    <div class="esquina-derecha">
+                        <a href="#" class="icono" ><i class="fas fa-search" id="icon-search"></i></a>
+                        <a href="#" class="icono"><i class="fas fa-cart-plus"></i></a>
+                        <a href="#" class="sesion">INICIAR SESIÓN/REGISTRARSE</a>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="contenedor-center">
-                        <div class="search">
-                            <div class="input-group mb-3">
-                              <input type="text" class="form-control" placeholder="¿Qué deseas buscar?" aria-label="Recipient's username" aria-describedby="button-addon2" id="input-search">
-                              <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contenedor-bottom">
-                        <h2>Categoria n</h2>
-                    </div>
-                </div>
-            </div>
+ 
         </div>
     </header>
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <ul id="box-search">
+        <li><a href="#"><i class="fas fa-search"></i>HTML</a></li>
+        <li><a href="#"><i class="fas fa-search"></i>CSS</a></li>
+        <li><a href="#"><i class="fas fa-search"></i>JavaScript</a></li>
+        <li><a href="#"><i class="fas fa-search"></i>PHP</a></li>
+        <li><a href="#"><i class="fas fa-search"></i>NODEJS</a></li>
+        <li><a href="#"><i class="fas fa-search"></i>VUEJS</a></li>
+        <li><a href="#"><i class="fas fa-search"></i>Como hacer</a></li>
+        <li><a href="#"><i class="fas fa-search"></i>Como crear</a></li>
+    </ul>
+
+    <div id="cover-ctn-search"></div>
     <br>
     <main>
         <div class="grid-container">
@@ -411,6 +405,8 @@
             });
         });
     </script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
