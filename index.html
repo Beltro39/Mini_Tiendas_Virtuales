@@ -39,9 +39,25 @@
                 
 
                 <div class="esquina-derecha">
-                    <a href="#" class="icono" ><i class="fas fa-search" id="icon-search"></i></a>
-                    <a href="#" class="icono"><i class="fas fa-cart-plus"></i></a>
-                    <a href="#" class="sesion">INICIAR SESIÓN/REGISTRARSE</a>
+                    <table border="0">
+                        <tr>
+                            <td>
+                                <a href="#" class="icono"><i class="fas fa-search" id="icon-search"></i></a>
+                            </td>
+                            <td align="center">
+                                <a href="#" class="icono" onclick="ver_carrito();"><i class="fas fa-cart-plus"></i></a>
+                            </td>
+                            <td align="center" rowspan="2">                            
+                                <a href="#" class="sesion">INICIAR SESIÓN/REGISTRARSE</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"></td>
+                            <td style="padding-left: 10px;font-size: 12px;">
+                                <span id="cart_badge" class="badge badge-danger">0</span>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -64,249 +80,264 @@
     <div id="cover-ctn-search"></div>
     <br>
     <main>
-        <div class="grid-container">
-            <div class="card" id="1">
-                <div class="card-title">Choco Break</div>
-                <div class="card-image"></div>
-                <div class="card-information">
-                    <a data-toggle="modal" data-target="#modal_articulo">
-                        <div class="card-image">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
-                        </div>
-                    </a>
-                    <div class="card-puntuation">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units" align="center">
-                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(1,-1)"><i class="fa fa-minus-circle"></i></button>
+        <div id="tienda">
+            <div class="grid-container">
+                <div class="card" id="1">
+                    <div class="card-title">Choco Break</div>
+                    <div class="card-image"></div>
+                    <div class="card-information">
+                        <a data-toggle="modal" data-target="#modal_articulo">
+                            <div class="card-image">
+                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
-                            <input type="text" class="form-control" id="art_1" value="0" align="center">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(1,1)"><i class="fa fa-plus-circle"></i></button>
-                            </div>
+                        </a>
+                        <div class="card-puntuation">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" id="2">
-                <div class="card-title">Choco Break</div>
-                <div class="card-image"></div>
-                <div class="card-information">
-                    <a data-toggle="modal" data-target="#modal_articulo">
-                        <div class="card-image">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
-                        </div>
-                    </a>
-                    <div class="card-puntuation">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units" align="center">
-                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(2,-1)"><i class="fa fa-minus-circle"></i></button>
-                            </div>
-                            <input type="text" class="form-control" id="art_2" value="0" align="center">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(2,1)"><i class="fa fa-plus-circle"></i></button>
+                        <div class="card-price">$ 200 c/u</div>
+                        <div class="card-units" align="center">
+                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(1,-1)"><i class="fa fa-minus-circle"></i></button>
+                                </div>
+                                <input type="text" class="form-control" id="art_1" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(1,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" id="3">
-                <div class="card-title">Choco Break</div>
-                <div class="card-image"></div>
-                <div class="card-information">
-                    <a data-toggle="modal" data-target="#modal_articulo">
-                        <div class="card-image">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
-                        </div>
-                    </a>
-                    <div class="card-puntuation">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units" align="center">
-                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(3,-1)"><i class="fa fa-minus-circle"></i></button>
+                <div class="card" id="2">
+                    <div class="card-title">Choco Break</div>
+                    <div class="card-image"></div>
+                    <div class="card-information">
+                        <a data-toggle="modal" data-target="#modal_articulo">
+                            <div class="card-image">
+                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
-                            <input type="text" class="form-control" id="art_3" value="0" align="center">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(3,1)"><i class="fa fa-plus-circle"></i></button>
-                            </div>
+                        </a>
+                        <div class="card-puntuation">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" id="4">
-                <div class="card-title">Choco Break</div>
-                <div class="card-image"></div>
-                <div class="card-information">
-                    <a data-toggle="modal" data-target="#modal_articulo">
-                        <div class="card-image">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
-                        </div>
-                    </a>
-                    <div class="card-puntuation">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units" align="center">
-                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(4,-1)"><i class="fa fa-minus-circle"></i></button>
-                            </div>
-                            <input type="text" class="form-control" id="art_4" value="0" align="center">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(4,1)"><i class="fa fa-plus-circle"></i></button>
+                        <div class="card-price">$ 200 c/u</div>
+                        <div class="card-units" align="center">
+                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(2,-1)"><i class="fa fa-minus-circle"></i></button>
+                                </div>
+                                <input type="text" class="form-control" id="art_2" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(2,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" id="5">
-                <div class="card-title">Choco Break</div>
-                <div class="card-image"></div>
-                <div class="card-information">
-                    <a data-toggle="modal" data-target="#modal_articulo">
-                        <div class="card-image">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
-                        </div>
-                    </a>
-                    <div class="card-puntuation">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units" align="center">
-                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(5,-1)"><i class="fa fa-minus-circle"></i></button>
+                <div class="card" id="3">
+                    <div class="card-title">Choco Break</div>
+                    <div class="card-image"></div>
+                    <div class="card-information">
+                        <a data-toggle="modal" data-target="#modal_articulo">
+                            <div class="card-image">
+                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
-                            <input type="text" class="form-control" id="art_5" value="0" align="center">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(5,1)"><i class="fa fa-plus-circle"></i></button>
-                            </div>
+                        </a>
+                        <div class="card-puntuation">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" id="6">
-                <div class="card-title">Choco Break</div>
-                <div class="card-image"></div>
-                <div class="card-information">
-                    <a data-toggle="modal" data-target="#modal_articulo">
-                        <div class="card-image">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
-                        </div>
-                    </a>
-                    <div class="card-puntuation">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units" align="center">
-                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(6,-1)"><i class="fa fa-minus-circle"></i></button>
-                            </div>
-                            <input type="text" class="form-control" id="art_6" value="0" align="center">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(6,1)"><i class="fa fa-plus-circle"></i></button>
+                        <div class="card-price">$ 200 c/u</div>
+                        <div class="card-units" align="center">
+                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(3,-1)"><i class="fa fa-minus-circle"></i></button>
+                                </div>
+                                <input type="text" class="form-control" id="art_3" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(3,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" id="7">
-                <div class="card-title">Choco Break</div>
-                <div class="card-image"></div>
-                <div class="card-information">
-                    <a data-toggle="modal" data-target="#modal_articulo">
-                        <div class="card-image">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
-                        </div>
-                    </a>
-                    <div class="card-puntuation">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units" align="center">
-                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(7,-1)"><i class="fa fa-minus-circle"></i></button>
+                <div class="card" id="4">
+                    <div class="card-title">Choco Break</div>
+                    <div class="card-image"></div>
+                    <div class="card-information">
+                        <a data-toggle="modal" data-target="#modal_articulo">
+                            <div class="card-image">
+                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
-                            <input type="text" class="form-control" id="art_7" value="0" align="center">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(7,1)"><i class="fa fa-plus-circle"></i></button>
+                        </a>
+                        <div class="card-puntuation">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="card-price">$ 200 c/u</div>
+                        <div class="card-units" align="center">
+                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(4,-1)"><i class="fa fa-minus-circle"></i></button>
+                                </div>
+                                <input type="text" class="form-control" id="art_4" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(4,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" id="8">
-                <div class="card-title">Choco Break</div>
-                <div class="card-image"></div>
-                <div class="card-information">
-                    <a data-toggle="modal" data-target="#modal_articulo">
-                        <div class="card-image">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
-                        </div>
-                    </a>
-                    <div class="card-puntuation">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units" align="center">
-                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(8,-1)"><i class="fa fa-minus-circle"></i></button>
+                <div class="card" id="5">
+                    <div class="card-title">Choco Break</div>
+                    <div class="card-image"></div>
+                    <div class="card-information">
+                        <a data-toggle="modal" data-target="#modal_articulo">
+                            <div class="card-image">
+                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
-                            <input type="text" class="form-control" id="art_8" value="0" align="center">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="counter(8,1)"><i class="fa fa-plus-circle"></i></button>
+                        </a>
+                        <div class="card-puntuation">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="card-price">$ 200 c/u</div>
+                        <div class="card-units" align="center">
+                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(5,-1)"><i class="fa fa-minus-circle"></i></button>
+                                </div>
+                                <input type="text" class="form-control" id="art_5" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(5,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="6">
+                    <div class="card-title">Choco Break</div>
+                    <div class="card-image"></div>
+                    <div class="card-information">
+                        <a data-toggle="modal" data-target="#modal_articulo">
+                            <div class="card-image">
+                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
+                            </div>
+                        </a>
+                        <div class="card-puntuation">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="card-price">$ 200 c/u</div>
+                        <div class="card-units" align="center">
+                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(6,-1)"><i class="fa fa-minus-circle"></i></button>
+                                </div>
+                                <input type="text" class="form-control" id="art_6" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(6,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="7">
+                    <div class="card-title">Choco Break</div>
+                    <div class="card-image"></div>
+                    <div class="card-information">
+                        <a data-toggle="modal" data-target="#modal_articulo">
+                            <div class="card-image">
+                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
+                            </div>
+                        </a>
+                        <div class="card-puntuation">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="card-price">$ 200 c/u</div>
+                        <div class="card-units" align="center">
+                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(7,-1)"><i class="fa fa-minus-circle"></i></button>
+                                </div>
+                                <input type="text" class="form-control" id="art_7" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(7,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="8">
+                    <div class="card-title">Choco Break</div>
+                    <div class="card-image"></div>
+                    <div class="card-information">
+                        <a data-toggle="modal" data-target="#modal_articulo">
+                            <div class="card-image">
+                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
+                            </div>
+                        </a>
+                        <div class="card-puntuation">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="card-price">$ 200 c/u</div>
+                        <div class="card-units" align="center">
+                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(8,-1)"><i class="fa fa-minus-circle"></i></button>
+                                </div>
+                                <input type="text" class="form-control" id="art_8" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(8,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-       
+        <div id="carrito">
+            <div class="grid-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carrito_tabla">
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
 
     <script src="https://kit.fontawesome.com/ebe1d4e0f3.js" crossorigin="anonymous"></script>
@@ -337,20 +368,32 @@
                 if (shopping_cart[i].art == art) {
                     shopping_cart[i].cant = parseInt(shopping_cart[i].cant+step)
                     if (shopping_cart[i].cant == 0) {
-                        shopping_cart.splice(i)
+                        shopping_cart.splice(i,1)
                     }
                     encontrado=true;
                 }
             }
             if (!encontrado) {
                 shopping_cart.push({art: art,cant: step})
-                shopping_counter()
             }
+            // Añade o resta cantidades al badget del carrito
+            $("#cart_badge").text(shopping_cart.length)
         }
 
-        // Añade o resta cantidades al ícono del carrito
-        function shopping_counter(){
-            
+        //muestra el contenido del carrito
+        function ver_carrito(){
+            $('#tienda').hide(500);
+            $('#carrito').show(500);
+
+            for (var i = shopping_cart.length - 1; i >= 0; i--) {
+                shopping_cart[i]
+                var table = document.getElementById("carrito_tabla");
+                var row = table.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = shopping_cart[i].art;
+                cell2.innerHTML = shopping_cart[i].cant;
+            }
         }
     </script>
 
