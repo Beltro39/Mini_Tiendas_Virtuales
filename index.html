@@ -19,37 +19,31 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="number">
-                <span class="minus">-</span>
-                <input type="text" value="0"/>
-                <span class="plus">+</span>
-            </div>
+            
           </div>
         </div>
       </div>
     </div>
-
 </head>
 <body>
     <header>
         <div class="contenedor">
-                <div class="contenedor-top">
-                    <div class="esquina-izquierda">
-                        <img class="logo" src="imagenes/Logo.png" alt="">
-                        <a href="#">Categoria 1</a>
-                        <a href="#">Categoria 2</a>
-                        <a href="#">Categoria 3</a>
-                        <a href="#">Categoria 4</a>
-                     </div>
-                    
+            <div class="contenedor-top">
+                <div class="esquina-izquierda">
+                    <img class="logo" src="imagenes/Logo.png" alt="">
+                    <a href="#">Categoria 1</a>
+                    <a href="#">Categoria 2</a>
+                    <a href="#">Categoria 3</a>
+                    <a href="#">Categoria 4</a>
+                 </div>
+                
 
-                    <div class="esquina-derecha">
-                        <a href="#" class="icono" ><i class="fas fa-search" id="icon-search"></i></a>
-                        <a href="#" class="icono"><i class="fas fa-cart-plus"></i></a>
-                        <a href="#" class="sesion">INICIAR SESIÓN/REGISTRARSE</a>
-                    </div>
+                <div class="esquina-derecha">
+                    <a href="#" class="icono" ><i class="fas fa-search" id="icon-search"></i></a>
+                    <a href="#" class="icono"><i class="fas fa-cart-plus"></i></a>
+                    <a href="#" class="sesion">INICIAR SESIÓN/REGISTRARSE</a>
                 </div>
- 
+            </div>
         </div>
     </header>
     <div id="ctn-bars-search">
@@ -88,22 +82,14 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units">
-                        <div class="row number">
-                            <div class="col-lg-3" align="right" style="padding: 0 0">
-                                <span class="minus">
-                                    <i class="fa fa-minus-circle"></i>
-                                </span>
+                    <div class="card-units" align="center">
+                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(1,-1)"><i class="fa fa-minus-circle"></i></button>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="input-group input-group-sm mb-3">
-                                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0">
-                                </div>
-                            </div>
-                            <div class="col-lg-3" align="left" style="padding: 0 0">
-                                <span class="plus">
-                                    <i class="fa fa-plus-circle"></i>
-                                </span>
+                            <input type="text" class="form-control" id="art_1" value="0" align="center">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(1,1)"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
@@ -126,22 +112,14 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units">
-                        <div class="row number">
-                            <div class="col-lg-3" align="right" style="padding: 0 0">
-                                <span class="minus">
-                                    <i class="fa fa-minus-circle"></i>
-                                </span>
+                    <div class="card-units" align="center">
+                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(2,-1)"><i class="fa fa-minus-circle"></i></button>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="input-group input-group-sm mb-3">
-                                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0">
-                                </div>
-                            </div>
-                            <div class="col-lg-3" align="left" style="padding: 0 0">
-                                <span class="plus">
-                                    <i class="fa fa-plus-circle"></i>
-                                </span>
+                            <input type="text" class="form-control" id="art_2" value="0" align="center">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(2,1)"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
@@ -164,22 +142,14 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units">
-                        <div class="row number">
-                            <div class="col-lg-3" align="right" style="padding: 0 0">
-                                <span class="minus">
-                                    <i class="fa fa-minus-circle"></i>
-                                </span>
+                    <div class="card-units" align="center">
+                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(3,-1)"><i class="fa fa-minus-circle"></i></button>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="input-group input-group-sm mb-3">
-                                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0">
-                                </div>
-                            </div>
-                            <div class="col-lg-3" align="left" style="padding: 0 0">
-                                <span class="plus">
-                                    <i class="fa fa-plus-circle"></i>
-                                </span>
+                            <input type="text" class="form-control" id="art_3" value="0" align="center">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(3,1)"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
@@ -202,22 +172,14 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units">
-                        <div class="row number">
-                            <div class="col-lg-3" align="right" style="padding: 0 0">
-                                <span class="minus">
-                                    <i class="fa fa-minus-circle"></i>
-                                </span>
+                    <div class="card-units" align="center">
+                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(4,-1)"><i class="fa fa-minus-circle"></i></button>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="input-group input-group-sm mb-3">
-                                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0">
-                                </div>
-                            </div>
-                            <div class="col-lg-3" align="left" style="padding: 0 0">
-                                <span class="plus">
-                                    <i class="fa fa-plus-circle"></i>
-                                </span>
+                            <input type="text" class="form-control" id="art_4" value="0" align="center">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(4,1)"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
@@ -240,22 +202,14 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units">
-                        <div class="row number">
-                            <div class="col-lg-3" align="right" style="padding: 0 0">
-                                <span class="minus">
-                                    <i class="fa fa-minus-circle"></i>
-                                </span>
+                    <div class="card-units" align="center">
+                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(5,-1)"><i class="fa fa-minus-circle"></i></button>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="input-group input-group-sm mb-3">
-                                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0">
-                                </div>
-                            </div>
-                            <div class="col-lg-3" align="left" style="padding: 0 0">
-                                <span class="plus">
-                                    <i class="fa fa-plus-circle"></i>
-                                </span>
+                            <input type="text" class="form-control" id="art_5" value="0" align="center">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(5,1)"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
@@ -278,22 +232,14 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units">
-                        <div class="row number">
-                            <div class="col-lg-3" align="right" style="padding: 0 0">
-                                <span class="minus">
-                                    <i class="fa fa-minus-circle"></i>
-                                </span>
+                    <div class="card-units" align="center">
+                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(6,-1)"><i class="fa fa-minus-circle"></i></button>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="input-group input-group-sm mb-3">
-                                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0">
-                                </div>
-                            </div>
-                            <div class="col-lg-3" align="left" style="padding: 0 0">
-                                <span class="plus">
-                                    <i class="fa fa-plus-circle"></i>
-                                </span>
+                            <input type="text" class="form-control" id="art_6" value="0" align="center">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(6,1)"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
@@ -316,22 +262,14 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units">
-                        <div class="row number">
-                            <div class="col-lg-3" align="right" style="padding: 0 0">
-                                <span class="minus">
-                                    <i class="fa fa-minus-circle"></i>
-                                </span>
+                    <div class="card-units" align="center">
+                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(7,-1)"><i class="fa fa-minus-circle"></i></button>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="input-group input-group-sm mb-3">
-                                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0">
-                                </div>
-                            </div>
-                            <div class="col-lg-3" align="left" style="padding: 0 0">
-                                <span class="plus">
-                                    <i class="fa fa-plus-circle"></i>
-                                </span>
+                            <input type="text" class="form-control" id="art_7" value="0" align="center">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(7,1)"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
@@ -354,29 +292,19 @@
                         <i class="far fa-star"></i>
                     </div>
                     <div class="card-price">$ 200 c/u</div>
-                    <div class="card-units">
-                        <div class="row number">
-                            <div class="col-lg-3" align="right" style="padding: 0 0">
-                                <span class="minus">
-                                    <i class="fa fa-minus-circle"></i>
-                                </span>
+                    <div class="card-units" align="center">
+                        <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(8,-1)"><i class="fa fa-minus-circle"></i></button>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="input-group input-group-sm mb-3">
-                                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0">
-                                </div>
-                            </div>
-                            <div class="col-lg-3" align="left" style="padding: 0 0">
-                                <span class="plus">
-                                    <i class="fa fa-plus-circle"></i>
-                                </span>
+                            <input type="text" class="form-control" id="art_8" value="0" align="center">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="counter(8,1)"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-
         </div>
        
     </main>
@@ -388,22 +316,42 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-            $(document).ready(function() {
-            $('.minus').click(function () {
-                var $input = $(this).parent().find('input');
-                var count = parseInt($input.val()) - 1;
-                count = count < 0 ? 1 : count;
-                $input.val(count);
-                $input.change();
-                return false;
-            });
-            $('.plus').click(function () {
-                var $input = $(this).parent().find('input');
-                $input.val(parseInt($input.val()) + 1);
-                $input.change();
-                return false;
-            });
-        });
+        // almacena los productos añadidos al carrito
+        var shopping_cart = []
+
+        // Incrementa el contador del artículo
+        function counter(art,step){
+            var $input = $('#art_'+art);
+            unidades = $('#art_'+art).val();
+            if ((parseInt($input.val())+step)>=0) {
+                shopping_manage_unit(art,step)
+                $input.val(parseInt($input.val()) + step);
+            }
+            console.log(shopping_cart)
+        }
+
+        // Añade la cantidad deseada al arreglo del carrito
+        function shopping_manage_unit(art,step){
+            var encontrado = false;
+            for (var i = 0; i < shopping_cart.length; i++) {
+                if (shopping_cart[i].art == art) {
+                    shopping_cart[i].cant = parseInt(shopping_cart[i].cant+step)
+                    if (shopping_cart[i].cant == 0) {
+                        shopping_cart.splice(i)
+                    }
+                    encontrado=true;
+                }
+            }
+            if (!encontrado) {
+                shopping_cart.push({art: art,cant: step})
+                shopping_counter()
+            }
+        }
+
+        // Añade o resta cantidades al ícono del carrito
+        function shopping_counter(){
+            
+        }
     </script>
 
 <script src="script.js"></script>
