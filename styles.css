@@ -137,7 +137,7 @@ background-color: rgba(0,0,0,0.1);
 
 .grid-container{
     position: relative;
-    padding: 90px 10% 0 5%;
+    padding: 90px 10% 0 13%;
     display: grid;
     grid-template-columns: repeat(4, 20%);
     grid-column-gap: 80px;
