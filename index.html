@@ -79,8 +79,8 @@
 
     <div id="cover-ctn-search"></div>
     <br>
-    <main>
-        <div id="tienda">
+    <main id="main">
+        <div id="tienda" style="display: block;">
             <div class="grid-container">
                 <div class="card" id="1">
                     <div class="card-title">Choco Break</div>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="card-price">$ 200 c/u</div>
                         <div class="card-units" align="center">
-                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group mb-3 input-group-sm" id="div_art_1" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(1,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
@@ -130,7 +130,7 @@
                         </div>
                         <div class="card-price">$ 200 c/u</div>
                         <div class="card-units" align="center">
-                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group mb-3 input-group-sm" id="div_art_2" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(2,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="card-price">$ 200 c/u</div>
                         <div class="card-units" align="center">
-                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group mb-3 input-group-sm" id="div_art_3" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(3,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
@@ -190,7 +190,7 @@
                         </div>
                         <div class="card-price">$ 200 c/u</div>
                         <div class="card-units" align="center">
-                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group mb-3 input-group-sm" id="div_art_4" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(4,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
@@ -220,7 +220,7 @@
                         </div>
                         <div class="card-price">$ 200 c/u</div>
                         <div class="card-units" align="center">
-                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group mb-3 input-group-sm" id="div_art_5" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(5,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
@@ -250,7 +250,7 @@
                         </div>
                         <div class="card-price">$ 200 c/u</div>
                         <div class="card-units" align="center">
-                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group mb-3 input-group-sm" id="div_art_6" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(6,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
@@ -280,7 +280,7 @@
                         </div>
                         <div class="card-price">$ 200 c/u</div>
                         <div class="card-units" align="center">
-                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group mb-3 input-group-sm" id="div_art_7" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(7,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
@@ -310,11 +310,11 @@
                         </div>
                         <div class="card-price">$ 200 c/u</div>
                         <div class="card-units" align="center">
-                            <div class="input-group mb-3 input-group-sm" style="width: 50%" align="center">
+                            <div class="input-group mb-3 input-group-sm" id="div_art_8" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(8,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control" id="art_8" value="0" align="center">
+                                <input type="text" class="form-control input_art" id="art_8" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(8,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -325,18 +325,30 @@
             </div>
         </div>
         <div id="carrito" style="display: none;">
-            <div class="grid-container">
-                <div></div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Artículo</th>
-                            <th>Cantidad</th>
-                        </tr>
-                    </thead>
-                    <tbody id="carrito_tabla">
-                    </tbody>
-                </table>
+            <div class="menu">
+                <div class="row"><a style="cursor: pointer;" onclick="mostrar('tienda');"><i class="fa fa-arrow-left" aria-hidden="true"> regresar</i></a></div>
+                <br>
+                <div class="row"><h3>Artículos en Carrito</h3></div>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Artículo</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Total</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="carrito_tabla">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-3">
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -346,59 +358,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        // almacena los productos añadidos al carrito
-        var shopping_cart = []
-
-        // Incrementa el contador del artículo
-        function counter(art,step){
-            var $input = $('#art_'+art);
-            unidades = $('#art_'+art).val();
-            if ((parseInt($input.val())+step)>=0) {
-                shopping_manage_unit(art,step)
-                $input.val(parseInt($input.val()) + step);
-            }
-            console.log(shopping_cart)
-        }
-
-        // Añade la cantidad deseada al arreglo del carrito
-        function shopping_manage_unit(art,step){
-            var encontrado = false;
-            for (var i = 0; i < shopping_cart.length; i++) {
-                if (shopping_cart[i].art == art) {
-                    shopping_cart[i].cant = parseInt(shopping_cart[i].cant+step)
-                    if (shopping_cart[i].cant == 0) {
-                        shopping_cart.splice(i,1)
-                    }
-                    encontrado=true;
-                }
-            }
-            if (!encontrado) {
-                shopping_cart.push({art: art,cant: step})
-            }
-            // Añade o resta cantidades al badget del carrito
-            $("#cart_badge").text(shopping_cart.length)
-        }
-
-        //muestra el contenido del carrito
-        function ver_carrito(){
-            $('#tienda').hide(500);
-            $('#carrito').show(500);
-
-            for (var i = shopping_cart.length - 1; i >= 0; i--) {
-                shopping_cart[i]
-                var table = document.getElementById("carrito_tabla");
-                var row = table.insertRow(0);
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                cell1.innerHTML = shopping_cart[i].art;
-                cell2.innerHTML = shopping_cart[i].cant;
-            }
-        }
-    </script>
-
-<script src="script.js"></script>
-
+    <script type="text/javascript" src="functions.js"></script>
 </body>
 </html>

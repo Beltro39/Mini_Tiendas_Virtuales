@@ -204,3 +204,17 @@ background-color: rgba(0,0,0,0.1);
     font-weight: bold;
 }
 
+.menu{
+    position: relative;
+    padding: 90px 5% 0 5%;
+}
+
+.input_art{
+    max-width: 50px;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
