@@ -10,19 +10,148 @@
     <!-- Vertically centered scrollable modal -->
     <!-- Modal -->
     <div class="modal fade" id="modal_articulo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nombre Artículo</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            
-          </div>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <h5>Choco Break</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" align="center">
+                    <div class="row" align="center">
+                        <div class="col-lg-12">
+                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4" align="center"></div>
+                        <div class="col-lg-4" align="center">
+                            <p>$ 200 c/u</p>
+                            
+                                <div class="input-group mb-4 input-group-sm" style="width: 45%" id="div_art_1">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="counter(1,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    </div>
+                                    <input type="text" class="form-control input_art" onchange="counter(1,0);" id="art_1" value="0" align="center">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="counter(1,1)"><i class="fa fa-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <div class="col-lg-4" align="center"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12" align="center">
+                            <div id="accordion">
+                              <div class="card">
+                                <div class="card-header" align="left">
+                                  <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                    Información del producto
+                                  </a>
+                                </div>
+                                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                  <div class="card-body">
+                                    Maecenas porta ullamcorper commodo. Vestibulum at libero at est ultrices venenatis a ac odio. Etiam sit amet nunc vel ipsum hendrerit placerat eget quis turpis. Fusce sem neque, facilisis sit amet auctor eget, porta quis diam. Ut imperdiet augue ac tortor mattis, non fermentum enim bibendum. Cras placerat sit amet lorem a semper.
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header">
+                                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td>Calificaciones y comentarios</td>
+                                            <td style="text-align: right;">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                  </a>
+                                </div>
+                                <div id="collapseTwo" class="collapse" data-parent="#accordion" style="text-align: justify;">
+                                  <div class="card-body">
+                                        <p style="padding-left: 0px">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </p>
+                                        <p style="padding-left: 15px">
+                                            Fusce sem neque, facilisis sit amet auctor eget, porta quis diam. Ut imperdiet augue ac tortor mattis, non fermentum enim bibendum. Cras placerat sit amet lorem a semper.Fusce sem neque, facilisis sit amet auctor eget, porta quis diam. Ut imperdiet augue ac tortor mattis, non fermentum enim bibendum. Cras placerat sit amet lorem a semper.
+                                        </p>
+                                        <p style="padding-left: 0px">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </p>
+                                        <p style="padding-left: 15px">
+                                            Fusce sem neque, facilisis sit amet auctor eget, porta quis diam. Ut imperdiet augue ac tortor mattis, non fermentum enim bibendum. Cras placerat sit amet lorem a semper.
+                                        </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+    <div class="modal fade" id="modal_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <h5>Inicio de Sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" align="center">
+                    <div id="signin">
+                        <div class="row" align="center">
+                            <div class="col-lg-12">
+                                <form style="width: 70%">
+                                  <div class="form-group">
+                                    <label for="email">Email o Usuario:</label>
+                                    <input type="email" class="form-control" placeholder="Ingresar Email o Usuario" id="email">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="pwd">Contraseña:</label>
+                                    <input type="password" class="form-control" placeholder="Ingresar Contraseña" id="pwd">
+                                  </div>
+                                  <div class="form-group form-check">
+                                    <label class="form-check-label">
+                                      <input class="form-check-input" type="checkbox"> Recordarme
+                                    </label>
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Ingresar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row" align="center">
+                            <div class="col-lg-12">
+                                <a href="#" style="cursor: pointer;" onclick="Registro()">Clic aquí para Registrarse</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="signup">
+                        
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
     </div>
 </head>
 <body>
@@ -36,8 +165,6 @@
                     <a href="#">Categoria 3</a>
                     <a href="#">Categoria 4</a>
                  </div>
-                
-
                 <div class="esquina-derecha">
                     <table border="0" style="line-height: 0.2;">
                         <tr>
@@ -48,7 +175,7 @@
                                 <a href="#" class="icono" onclick="ver_carrito();"><i class="fas fa-cart-plus"></i></a>
                             </td>
                             <td align="center" rowspan="2">                            
-                                <a href="#" class="sesion">INICIAR SESIÓN/REGISTRARSE</a>
+                                <a href="#" class="sesion" data-toggle="modal" data-target="#modal_login" style="cursor: pointer;">INICIAR SESIÓN/REGISTRARSE</a>
                             </td>
                         </tr>
                         <tr>
@@ -82,29 +209,29 @@
     <main id="main">
         <div id="tienda" style="display: block;">
             <div class="grid-container">
-                <div class="card" id="1">
-                    <div class="card-title">Choco Break</div>
-                    <div class="card-image"></div>
-                    <div class="card-information">
+                <div class="card_art" id="1">
+                    <div class="card_art-title">Choco Break</div>
+                    <div class="card_art-image"></div>
+                    <div class="card_art-information">
                         <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
-                            <div class="card-image">
+                            <div class="card_art-image">
                                 <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
-                        <div class="card-puntuation">
+                        <div class="card_art-puntuation">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card-price">$ 200 c/u</div>
-                        <div class="card-units" align="center">
+                        <div class="card_art-price">$ 200 c/u</div>
+                        <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_1" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(1,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control" id="art_1" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter(1,0);" id="art_1" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(1,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -112,29 +239,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" id="2">
-                    <div class="card-title">Choco Break</div>
-                    <div class="card-image"></div>
-                    <div class="card-information">
+                <div class="card_art" id="2">
+                    <div class="card_art-title">Choco Break</div>
+                    <div class="card_art-information">
                         <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
-                            <div class="card-image">
+                            <div class="card_art-image">
                                 <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
-                        <div class="card-puntuation">
+                        <div class="card_art-puntuation">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card-price">$ 200 c/u</div>
-                        <div class="card-units" align="center">
+                        <div class="card_art-price">$ 200 c/u</div>
+                        <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_2" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(2,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control" id="art_2" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter(2,0);" id="art_2" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(2,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -142,29 +268,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" id="3">
-                    <div class="card-title">Choco Break</div>
-                    <div class="card-image"></div>
-                    <div class="card-information">
+                <div class="card_art" id="3">
+                    <div class="card_art-title">Choco Break</div>
+                    <div class="card_art-image"></div>
+                    <div class="card_art-information">
                         <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
-                            <div class="card-image">
+                            <div class="card_art-image">
                                 <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
-                        <div class="card-puntuation">
+                        <div class="card_art-puntuation">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card-price">$ 200 c/u</div>
-                        <div class="card-units" align="center">
+                        <div class="card_art-price">$ 200 c/u</div>
+                        <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_3" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(3,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control" id="art_3" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter(3,0);" id="art_3" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(3,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -172,29 +298,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" id="4">
-                    <div class="card-title">Choco Break</div>
-                    <div class="card-image"></div>
-                    <div class="card-information">
+                <div class="card_art" id="4">
+                    <div class="card_art-title">Choco Break</div>
+                    <div class="card_art-image"></div>
+                    <div class="card_art-information">
                         <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
-                            <div class="card-image">
+                            <div class="card_art-image">
                                 <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
-                        <div class="card-puntuation">
+                        <div class="card_art-puntuation">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card-price">$ 200 c/u</div>
-                        <div class="card-units" align="center">
+                        <div class="card_art-price">$ 200 c/u</div>
+                        <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_4" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(4,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control" id="art_4" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter(4,0);" id="art_4" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(4,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -202,29 +328,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" id="5">
-                    <div class="card-title">Choco Break</div>
-                    <div class="card-image"></div>
-                    <div class="card-information">
+                <div class="card_art" id="5">
+                    <div class="card_art-title">Choco Break</div>
+                    <div class="card_art-image"></div>
+                    <div class="card_art-information">
                         <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
-                            <div class="card-image">
+                            <div class="card_art-image">
                                 <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
-                        <div class="card-puntuation">
+                        <div class="card_art-puntuation">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card-price">$ 200 c/u</div>
-                        <div class="card-units" align="center">
+                        <div class="card_art-price">$ 200 c/u</div>
+                        <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_5" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(5,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control" id="art_5" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter(5,0);" id="art_5" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(5,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -232,29 +358,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" id="6">
-                    <div class="card-title">Choco Break</div>
-                    <div class="card-image"></div>
-                    <div class="card-information">
+                <div class="card_art" id="6">
+                    <div class="card_art-title">Choco Break</div>
+                    <div class="card_art-image"></div>
+                    <div class="card_art-information">
                         <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
-                            <div class="card-image">
+                            <div class="card_art-image">
                                 <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
-                        <div class="card-puntuation">
+                        <div class="card_art-puntuation">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card-price">$ 200 c/u</div>
-                        <div class="card-units" align="center">
+                        <div class="card_art-price">$ 200 c/u</div>
+                        <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_6" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(6,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control" id="art_6" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter(6,0);" id="art_6" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(6,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -262,29 +388,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" id="7">
-                    <div class="card-title">Choco Break</div>
-                    <div class="card-image"></div>
-                    <div class="card-information">
+                <div class="card_art" id="7">
+                    <div class="card_art-title">Choco Break</div>
+                    <div class="card_art-image"></div>
+                    <div class="card_art-information">
                         <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
-                            <div class="card-image">
+                            <div class="card_art-image">
                                 <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
-                        <div class="card-puntuation">
+                        <div class="card_art-puntuation">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card-price">$ 200 c/u</div>
-                        <div class="card-units" align="center">
+                        <div class="card_art-price">$ 200 c/u</div>
+                        <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_7" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(7,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control" id="art_7" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter(7,0);" id="art_7" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(7,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -292,29 +418,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" id="8">
-                    <div class="card-title">Choco Break</div>
-                    <div class="card-image"></div>
-                    <div class="card-information">
+                <div class="card_art" id="8">
+                    <div class="card_art-title">Choco Break</div>
+                    <div class="card_art-image"></div>
+                    <div class="card_art-information">
                         <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
-                            <div class="card-image">
+                            <div class="card_art-image">
                                 <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
-                        <div class="card-puntuation">
+                        <div class="card_art-puntuation">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card-price">$ 200 c/u</div>
-                        <div class="card-units" align="center">
+                        <div class="card_art-price">$ 200 c/u</div>
+                        <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_8" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(8,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art" id="art_8" value="0" align="center">
+                                <input type="text" class="form-control input_art"  onchange="counter(8,0);" id="art_8" value="0" align="center">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="button" onclick="counter(8,1)"><i class="fa fa-plus-circle"></i></button>
                                 </div>
@@ -326,19 +452,21 @@
         </div>
         <div id="carrito" style="display: none;">
             <div class="menu">
-                <div class="row"><a style="cursor: pointer;" onclick="mostrar('tienda');"><i class="fa fa-arrow-left" aria-hidden="true"> regresar</i></a></div>
+                <div class="row"><a style="cursor: pointer;" onclick="IrATienda();"><i class="fa fa-arrow-left" aria-hidden="true"> regresar</i></a></div>
                 <br>
-                <div class="row"><h3>Artículos en Carrito</h3></div>
                 <div class="row">
-                    <div class="col-lg-9">
+                    <h3>Artículos en Carrito</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-9" align="center">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Artículo</th>
-                                    <th>Precio</th>
+                                    <th style="text-align: center;">Artículo</th>
+                                    <th style="text-align: center;">Precio</th>
                                     <th>Cantidad</th>
-                                    <th>Total</th>
-                                    <th>Eliminar</th>
+                                    <th style="text-align: center;">Total</th>
+                                    <th style="text-align: center;">Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody id="carrito_tabla">
@@ -346,7 +474,14 @@
                         </table>
                     </div>
                     <div class="col-lg-3">
-                        
+                        <div class="card-cart">
+                          <div class="card-body">
+                              <p>Total a Pagar</p>
+                              <br><br>
+                              <h4>$ - </h4>
+                              <button type="button" class="btn btn-success">Proceder con el Pago</button>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>

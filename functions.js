@@ -4,20 +4,20 @@ var shopping_cart = []
 // Incrementa el contador del artículo
 function counter(art,step){
     var $input = $('#art_'+art);
-    unidades = $('#art_'+art).val();
+    unidades = parseInt($('#art_'+art).val());
     if ((parseInt($input.val())+step)>=0) {
-        shopping_manage_unit(art,step)
+        shopping_manage_unit(art,unidades,step)
         $input.val(parseInt($input.val()) + step);
     }
     console.log(shopping_cart)
 }
 
-// Añade la cantidad deseada al arreglo del carrito
-function shopping_manage_unit(art,step){
+// Añade la cantidad paso a paso al arreglo del carrito
+function shopping_manage_unit(art,unidades,step){
     var encontrado = false;
     for (var i = 0; i < shopping_cart.length; i++) {
         if (shopping_cart[i].art == art) {
-            shopping_cart[i].cant = parseInt(shopping_cart[i].cant+step)
+            shopping_cart[i].cant = parseInt(unidades+step)
             if (shopping_cart[i].cant == 0) {
                 shopping_cart.splice(i,1)
             }
@@ -25,7 +25,7 @@ function shopping_manage_unit(art,step){
         }
     }
     if (!encontrado) {
-        shopping_cart.push({art: art,cant: step})
+        shopping_cart.push({art: art,cant: unidades+step})
     }
     // Añade o resta cantidades al badget del carrito
     $("#cart_badge").text(shopping_cart.length)
@@ -47,14 +47,15 @@ function ver_carrito(){
         cell2.innerHTML = '$ 200';
         cell3.appendChild(document.getElementById('div_art_'+shopping_cart[i].art));
         cell4.innerHTML = shopping_cart[i].cant;
-        cell5.innerHTML = shopping_cart[i].cant;
+        cell5.innerHTML = "<i class='fa fa-trash-o' aria-hidden='true'></i>";
     }
 
-    //ajuste de la alineación vertical
+    //ajuste de la alineación vertical y horizontal
     var c = document.getElementById("carrito_tabla");
     for (var i = 0; i < c.rows.length; i++) {
         for (var j = 0; j < c.rows[i].cells.length; j++) {
-            console.log(c.rows[i].cells[j].style.verticalAlign = "middle")
+            c.rows[i].cells[j].style.verticalAlign = "middle";
+            c.rows[i].cells[j].style.textAlign = "center";
         }
     }
 
@@ -70,4 +71,10 @@ function mostrar(div_id){
   $('#tienda').hide(500);
   $('#carrito').hide(500);
   $('#'+div_id).show(500);  
+}
+
+//
+function Registro(){
+    $('#signin').hide(500);
+    $('#signup').show(500);     
 }

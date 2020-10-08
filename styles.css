@@ -145,41 +145,39 @@ background-color: rgba(0,0,0,0.1);
     
 }
 
-.card {
-
+.card_art {
+    padding: 20px;
+    text-align: center;
+    grid-template-areas: "title" "image" "information";
+    grid-template-rows: 15px 120px 70px;
+    border-radius: 18px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    border-color: black;
+  }
+.card-cart {
     padding: 20px;
     text-align: center;
     display: grid;
     grid-template-areas: "title" "image" "information";
     grid-template-rows: 15px 120px 70px;
     border-radius: 18px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.9);
     border-color: black;
-   /*
-    display: grid;
-    grid-template-columns: 100px;
-    
-    
-    
-    */
-  }
-
-  .card-title {
+}
+.card_art-title {
     grid-area: title;
-  }
-  .card-image {
+}
+.card_art-image {
     grid-area: image;
-    background: url("imagenes/img1.jpg");
     background-size: cover;
     background-position: center;
-  }
-  .card-information {
+}
+.card_art-information {
     grid-area: information; 
-  }
-  
- .card-puntuation{
-  margin: 0 0 5px;
- }
+}
+.card_art-puntuation{
+    margin: 0 0 5px;
+}
 
 
 /* contador del carrito */
