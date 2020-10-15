@@ -84,7 +84,8 @@ background-color: rgba(0,0,0,0.1);
     width: 100%;
     padding: 0 0 10px;
     z-index: 100;
-    display:none;
+    display: none;
+   
     
 }
 #ctn-bars-search input{
@@ -93,18 +94,20 @@ background-color: rgba(0,0,0,0.1);
     padding: 10px;
     font-size: 15px;
     outline: 0;
+    border: none;
+    
 }
 
 #box-search{
     position: fixed;
-    top: 100px;
+    top: 122px;
     left: 50%;
     transform: translateX(-50%);
-    width: 1200px;
+    width: 100%;
     background: #fff;
     z-index: 100;
     overflow: hidden;
-    display: none;
+   display: none;
 }
 
 #box-search li a{
@@ -167,11 +170,7 @@ background-color: rgba(0,0,0,0.1);
 .card_art-title {
     grid-area: title;
 }
-.card_art-image {
-    grid-area: image;
-    background-size: cover;
-    background-position: center;
-}
+
 .card_art-information {
     grid-area: information; 
 }
