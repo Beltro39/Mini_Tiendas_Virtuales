@@ -13,32 +13,30 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header" align="center">
-                    <h5>Choco Break</h5>
+                    <p><h5 id="modal_articulo_nombre"></h5></p>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body" align="center">
                     <div class="row" align="center">
-                        <div class="col-lg-12">
-                            <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
+                        <div class="col-lg-12" id="modal_articulo_img">
+                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-4" align="center"></div>
                         <div class="col-lg-4" align="center">
-                            <p>$ 200 c/u</p>
-                            
-                                <div class="input-group mb-4 input-group-sm" style="width: 45%" id="main_modal_div_art_1">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="counter(1,-1)"><i class="fa fa-minus-circle"></i></button>
-                                    </div>
-                                    <input type="text" class="form-control input_art" onchange="counter(1,0);" id="main_modal_art_1" value="0" align="center">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="counter(1,1)"><i class="fa fa-plus-circle"></i></button>
-                                    </div>
+                            <p><h5 id="modal_articulo_precio">$ 200 c/u</h5></p>
+                            <div class="input-group mb-4 input-group-sm" style="width: 45%" id="modal_div_art">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('',,1,-1)"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                            
+                                <input type="text" class="form-control input_art" onchange="counter('Choco Break',200,1,0,'modal_');" id="modal_art_0" value="0" align="center">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('',,1,1)"><i class="fa fa-plus-circle"></i></button>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-4" align="center"></div>
                     </div>
@@ -213,9 +211,9 @@
                     <div class="card_art-title">Choco Break</div>
                     <div class="card_art-image"></div>
                     <div class="card_art-information">
-                        <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
+                        <a onclick="ver_detalle_articulo('Choco Break',200,1,$('#art_1').val());" style="cursor: pointer;">
                             <div class="card_art-image">
-                                <img src="imagenes/img1.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="imagenes/img_art_1.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
                         <div class="card_art-puntuation">
@@ -225,15 +223,15 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card_art-price" id="price_art_1">$ 200 c/u</div>
+                        <div class="card_art-price">$ 200 c/u</div>
                         <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_1" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(1,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Choco Break',200,1,-1,'')"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art" onchange="counter(1,0);" id="art_1" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter('Choco Break',200,1,0,'');" id="art_1" value="0" align="center">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(1,1)"><i class="fa fa-plus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Choco Break',200,1,1,'')"><i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -242,9 +240,9 @@
                 <div class="card_art" id="2">
                     <div class="card_art-title">Kit Kat</div>
                     <div class="card_art-information">
-                        <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
+                        <a onclick="ver_detalle_articulo('Kit Kat',1000,2,$('#art_2').val())" style="cursor: pointer;">
                             <div class="card_art-image">
-                                <img src="imagenes/img333.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="imagenes/img_art_2.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
                         <div class="card_art-puntuation">
@@ -254,15 +252,15 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card_art-price" id="price_art_2">$ 200 c/u</div>
+                        <div class="card_art-price">$ 1,000 c/u</div>
                         <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_2" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(2,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Kit Kat',1000,2,-1,'')"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art" onchange="counter(2,0);" id="art_2" value="0" align="center">
+                                <input type="text" class="form-control input_artKit" onchange="counter('Kit Kat',1000,2,0,'');" id="art_2" value="0" align="center">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(2,1)"><i class="fa fa-plus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Kit Kat',1000,2,1,'')"><i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -272,9 +270,9 @@
                     <div class="card_art-title">BurbuJet</div>
                     <div class="card_art-image"></div>
                     <div class="card_art-information">
-                        <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
+                        <a onclick="ver_detalle_articulo('BurbuJet',1500,3,$('#art_3').val())" style="cursor: pointer;">
                             <div class="card_art-image">
-                                <img src="imagenes/img44.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="imagenes/img_art_3.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
                         <div class="card_art-puntuation">
@@ -284,15 +282,15 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card_art-price" id="price_art_3">$ 200 c/u</div>
+                        <div class="card_art-price">$ 1,500 c/u</div>
                         <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_3" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(3,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('BurbuJet',1500,3,-1,'')"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art" onchange="counter(3,0);" id="art_3" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter('BurbuJet',1500,3,0,'');" id="art_3" value="0" align="center">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(3,1)"><i class="fa fa-plus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('BurbuJet',1500,3,1,'')"><i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -302,9 +300,9 @@
                     <div class="card_art-title">Jumbo combi</div>
                     <div class="card_art-image"></div>
                     <div class="card_art-information">
-                        <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
+                        <a onclick="ver_detalle_articulo('Jumbo combi',1750,4,$('#art_4').val())" style="cursor: pointer;">
                             <div class="card_art-image">
-                                <img src="imagenes/img55.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="imagenes/img_art_4.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
                         <div class="card_art-puntuation">
@@ -314,15 +312,15 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card_art-price" id="price_art_4">$ 200 c/u</div>
+                        <div class="card_art-price">$ 1,750 c/u</div>
                         <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_4" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(4,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counteJumbor('Jumbo combi',1750,4,-1,'')"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art" onchange="counter(4,0);" id="art_4" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter('Jumbo combi',1750,4,0,'');" id="art_4" value="0" align="center">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(4,1)"><i class="fa fa-plus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Jumbo combi',1750,4,1,'')"><i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -332,9 +330,9 @@
                     <div class="card_art-title">Ferrero Rocher</div>
                     <div class="card_art-image"></div>
                     <div class="card_art-information">
-                        <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
+                        <a onclick="ver_detalle_articulo('Ferrero Rocher',28500,5,$('#art_5').val())" style="cursor: pointer;">
                             <div class="card_art-image">
-                                <img src="imagenes/img66.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="imagenes/img_art_5.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
                         <div class="card_art-puntuation">
@@ -344,15 +342,15 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card_art-price" id="price_art_5">$ 200 c/u</div>
+                        <div class="card_art-price">$ 28,500 c/u</div>
                         <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_5" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(5,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Ferrero Rocher',28500,5,-1,'')"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art" onchange="counter(5,0);" id="art_5" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter('Ferrero Rocher',28500,5,0,'');" id="art_5" value="0" align="center">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(5,1)"><i class="fa fa-plus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Ferrero Rocher',28500,5,1,'')"><i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -362,9 +360,9 @@
                     <div class="card_art-title">Nutella</div>
                     <div class="card_art-image"></div>
                     <div class="card_art-information">
-                        <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
+                        <a onclick="ver_detalle_articulo('Nutella',21500,6,$('#art_6').val())" style="cursor: pointer;">
                             <div class="card_art-image">
-                                <img src="imagenes/img77.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="imagenes/img_art_6.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
                         <div class="card_art-puntuation">
@@ -374,15 +372,15 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card_art-price" id="price_art_5">$ 200 c/u</div>
+                        <div class="card_art-price">$ 21,500 c/u</div>
                         <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_6" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(6,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Nutella',21500,6,-1,'')"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art" onchange="counter(6,0);" id="art_6" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter('Nutella',21500,6,0,'');" id="art_6" value="0" align="center">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(6,1)"><i class="fa fa-plus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Nutella',21500,6,1,'')"><i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -392,9 +390,9 @@
                     <div class="card_art-title">Chocoramo</div>
                     <div class="card_art-image"></div>
                     <div class="card_art-information">
-                        <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
+                        <a onclick="ver_detalle_articulo('Chocoramo',1500,7,$('#art_7').val())" style="cursor: pointer;">
                             <div class="card_art-image">
-                                <img src="imagenes/img88.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="imagenes/img_art_7.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
                         <div class="card_art-puntuation">
@@ -404,15 +402,15 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card_art-price" id="price_art_7">$ 200 c/u</div>
+                        <div class="card_art-price">$ 1.500 c/u</div>
                         <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_7" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(7,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Chocoramo',1500,7,-1,'')"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art" onchange="counter(7,0);" id="art_7" value="0" align="center">
+                                <input type="text" class="form-control input_art" onchange="counter('Chocoramo',1500,7,0,'');" id="art_7" value="0" align="center">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(7,1)"><i class="fa fa-plus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Chocoramo',1500,7,1,'')"><i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -422,9 +420,9 @@
                     <div class="card_art-title">Chocoso</div>
                     <div class="card_art-image"></div>
                     <div class="card_art-information">
-                        <a data-toggle="modal" data-target="#modal_articulo" style="cursor: pointer;">
+                        <a onclick="ver_detalle_articulo('Chocoso',900,8,$('#art_8').val())" style="cursor: pointer;">
                             <div class="card_art-image">
-                                <img src="imagenes/img99.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="imagenes/img_art_8.jpg" class="img-fluid" alt="Responsive image">
                             </div>
                         </a>
                         <div class="card_art-puntuation">
@@ -434,15 +432,15 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <div class="card_art-price" id="price_art_8">$ 200 c/u</div>
+                        <div class="card_art-price">$ 900 c/u</div>
                         <div class="card_art-units" align="center">
                             <div class="input-group mb-3 input-group-sm" id="div_art_8" style="width: 50%" align="center">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(8,-1)"><i class="fa fa-minus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Chocoso',900,8,-1,'')"><i class="fa fa-minus-circle"></i></button>
                                 </div>
-                                <input type="text" class="form-control input_art"  onchange="counter(8,0);" id="art_8" value="0" align="center">
+                                <input type="text" class="form-control input_art"  onchange="counter('Chocoso',900,8,0,'');" id="art_8" value="0" align="center">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="counter(8,1)"><i class="fa fa-plus-circle"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="counter('Chocoso',900,8,1,'')"><i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -465,7 +463,7 @@
                                     <th style="text-align: center;">Artículo</th>
                                     <th style="text-align: center;">Precio</th>
                                     <th>Cantidad</th>
-                                    <th style="text-align: center;">Total</th>
+                                    <th style="text-align: center;">Subtotal</th>
                                     <th style="text-align: center;">Eliminar</th>
                                 </tr>
                             </thead>
@@ -476,9 +474,9 @@
                     <div class="col-lg-3">
                         <div class="card-cart">
                           <div class="card-body">
-                              <p>Total a Pagar</p>
-                              <br><br>
-                              <h4>$ - </h4>
+                              <p><h3>Total a Pagar</h3></p>
+                              <br>
+                              <h4><p id="shopping_cart_total">$ - </p></h4>
                               <button type="button" class="btn btn-success">Proceder con el Pago</button>
                           </div>
                         </div>
@@ -487,7 +485,7 @@
             </div>
         </div>
     </main>
-
+    <br><br>
     <script src="https://kit.fontawesome.com/ebe1d4e0f3.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script src="script.js"></script>

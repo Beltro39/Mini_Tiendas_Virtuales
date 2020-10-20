@@ -169,6 +169,7 @@ background-color: rgba(0,0,0,0.1);
 }
 .card_art-title {
     grid-area: title;
+    font-weight: bold;
 }
 
 .card_art-information {
